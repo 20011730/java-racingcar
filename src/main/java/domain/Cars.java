@@ -11,7 +11,7 @@ public class Cars {
     public Cars(List<String> carNames){
         cars = new ArrayList<>();
 
-
+        createCarList(carNames);
     }
 
     // 차량 리스트 생성
