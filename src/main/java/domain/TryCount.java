@@ -16,9 +16,4 @@ public class TryCount {
     public int getTryCount(){
         return tryCount;
     }
-
-    // 시도 횟수 감소
-    public void decreaseCount(){
-        tryCount--;
-    }
 }

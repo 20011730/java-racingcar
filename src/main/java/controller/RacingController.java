@@ -22,8 +22,11 @@ public class RacingController {
         TryCount tryCount = new TryCount(InputView.setTryCount());
 
         printResult(cars, tryCount);
+
+        findWinner(cars);
     }
 
+    // 결과 출력
     public void printResult(Cars cars, TryCount tryCount){
         for (int i = 0; i < tryCount.getTryCount(); i++){
             for (Car car : cars.getCars()){
@@ -34,4 +37,7 @@ public class RacingController {
         }
     }
 
+    public void findWinner(Cars cars){
+        OutputView.printWinner(cars.getCars());
+    }
 }
