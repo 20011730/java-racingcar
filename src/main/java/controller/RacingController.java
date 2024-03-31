@@ -1,8 +1,10 @@
 package controller;
 
+import domain.Car;
 import domain.Cars;
 import domain.TryCount;
 import view.InputView;
+import view.OutputView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,6 +21,17 @@ public class RacingController {
         // 시도 횟수 입력
         TryCount tryCount = new TryCount(InputView.setTryCount());
 
+        printResult(cars, tryCount);
+    }
+
+    public void printResult(Cars cars, TryCount tryCount){
+        for (int i = 0; i < tryCount.getTryCount(); i++){
+            for (Car car : cars.getCars()){
+                car.moveCar();
+            }
+
+            OutputView.printRacing(cars.getCars());
+        }
     }
 
 }
