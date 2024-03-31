@@ -29,6 +29,6 @@ public class Car {
         if (random_number >= RANDOM_MINIMUM){
             position.movePosition();
         }
-
+            
     }
 }
